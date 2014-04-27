@@ -40,7 +40,6 @@ div[role=article]{
 	padding: 100px 10%;
 }
 div[role=article]>h3{
-	display: hidden;
 	font-weight: 800;
 	font-size: 36px;
 	max-width: 750px;
