@@ -135,6 +135,7 @@ footer>a:hover{
 	border-radius: 0 0 5px 5px;
 }
 .design-selection h3, .design-archives h3, .zen-resources h3{
+	visibility: hidden;
 	width: 180px;
 }
 .design-selection ul, .design-archives ul, .zen-resources ul{
