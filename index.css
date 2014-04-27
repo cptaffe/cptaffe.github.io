@@ -123,6 +123,7 @@ footer>a{
 	list-style-type: none;
 }
 .sidebar ul>li{
+	display: block;
 	font-size: 14px;
 	background-color: rgb(40,40,40);
 	padding: 5px 10px;
@@ -134,8 +135,12 @@ footer>a{
 .sidebar ul>li>a{
 	color: rgb(100,100,100);
 }
+.sidebar ul>li>a:first-child{
+	display: block;
+	color: rgb(150,150,150);
+}
 .sidebar ul>li>a:hover{
-	color: rgb(180,180,180);
+	color: rgb(200,200,200);
 }
 .sidebar:hover{
 	width: 200px;
