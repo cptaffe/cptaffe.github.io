@@ -61,12 +61,12 @@ div[role=article]>p{
 
 .summary{
 	color: white;
-	background: url(http://www.itsjustlight.com/wp-content/uploads/2014/01/long-exposure-photography-fishermen.jpg) no-repeat;
+	background: url(img/long-exposure-photography-fishermen.jpg) no-repeat;
 	background-size: cover;
 }
 .preamble{
 	color: white;
-	background: url(http://wallpapersus.com/wp-content/uploads/2012/03/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
+	background: url(img/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -76,25 +76,25 @@ div[role=article]>p{
 
 .explanation{
 	color: white;
-	background: url(http://img1.wikia.nocookie.net/__cb20131006090531/powerlisting/images/6/63/SPACE_NEBULA_STARS.jpg) no-repeat;
+	background: url(img/SPACE_NEBULA_STARS.jpg) no-repeat;
 	background-size: cover;
 }
 
 .participation{
 	color: white;
-	background: url(http://www.geedew.com/wp-content/uploads/2013/08/Screen-shot-2013-08-11-at-1.40.08-AM.png) no-repeat;
+	background: url(img/Screen-shot-2013-08-11-at-1.40.08-AM.png) no-repeat;
 	background-size: cover;
 }
 .benefits{
 	color: white;
-	background: url(http://w8themes.com/wp-content/uploads/2013/09/Free-Mountain-Desktop-Backgrounds.jpg) no-repeat;
+	background: url(img/Free-Mountain-Desktop-Backgrounds.jpg) no-repeat;
 	background-size: cover;
 }
 .requirements{
 	color: white;
 	/*background: url(http://www.mrwallpaper.com/wallpapers/space-stars-road.jpg) no-repeat;
 	*/
-	background: url(http://www.designmyprofile.com/images/graphics/backgrounds/background0172.jpg) no-repeat;
+	background: url(img/background0172.jpg) no-repeat;
 	background-size: cover;
 }
 
