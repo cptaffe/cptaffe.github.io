@@ -11,6 +11,8 @@ body{
 	margin: auto;
 	background-color: white;
 }
+/* useful... */
+.page-wrapper{}
 a, a:visited{
 	color: #4183C4;
 	text-decoration: none;
@@ -94,57 +96,99 @@ div[role=article]>p{
 }
 
 footer{
-	background-color: rgb(60,60,60);
+	background-color: rgb(20,20,20);
 	padding: 10px 10px;
 }
-footer>a{
+footer>a, footer>a:visited{
+	color: rgb(150,150,150);
 	border-radius: 5px;
 	padding: 5px 10px;
+	transition: all .2s ease;
+}
+footer>a:hover{
+	color: rgb(200,200,200);
 }
 
-.sidebar{
+/* Global for menus */
+.design-selection, .design-archives, .zen-resources{
 	overflow: hidden;
-	width: 20px;
+	height: 15px;
+	width: 180px;
 	
 	color: rgb(180,180,180);
 	position: absolute;
 	top: 20px;
-	right: 0px;
 	transition: all 0.5s ease;
 	
-	background-color: rgba(20,20,20,0.8);
+	background-color: white;
 	padding: 10px;
 	
-	border-radius: 5px 0 0 5px;
+	border-radius: 0 0 5px 5px;
 }
-.sidebar h3{
-	width: 200px;
+.design-selection h3, .design-archives h3, .zen-resources h3{
+	width: 180px;
 }
-.sidebar ul{
-	width: 200px;
+.design-selection ul, .design-archives ul, .zen-resources ul{
+	width: 180px;
 	color: rgb(80,80,80);
 	list-style-type: none;
 }
-.sidebar ul>li{
+.design-selection ul>li, .design-archives ul>li, .zen-resources ul>li{
 	display: block;
 	font-size: 14px;
-	background-color: rgb(40,40,40);
+	/*background-color: rgb(40,40,40);*/
 	padding: 5px 10px;
 	margin: 5px 0;
 }
-.sidebar ul>li:hover{
-	background-color: rgb(50,50,50);
+.design-selection ul>li:hover, .design-archives ul>li:hover, .zen-resources ul>li:hover{
+	/*background-color: rgb(50,50,50);*/
 }
-.sidebar ul>li>a{
+.design-selection ul>li>a, .design-archives ul>li>a, .zen-resources ul>li>a{
 	color: rgb(100,100,100);
+	transition: all .2s ease;
 }
-.sidebar ul>li>a:first-child{
+.design-selection ul>li>a:first-child, .design-archives ul>li>a:first-child, .zen-resources ul>li>a:first-child{
 	display: block;
 	color: rgb(150,150,150);
 }
-.sidebar ul>li>a:hover{
+.design-selection ul>li>a:hover, .design-archives ul>li>a:hover, .zen-resources ul>li>a:hover{
 	color: rgb(200,200,200);
 }
-.sidebar:hover{
-	width: 200px;
+
+
+.design-selection:hover, .design-archives:hover, .zen-resources:hover{
+	/*background-color: rgba(20,20,20,0.8);*/
+	background-color: white;
+}
+
+/* Independent */
+.design-selection::before{
+	content: "Design Selection";
+}
+.design-archives::before{
+	content: "Design Archives";
+}
+.zen-resources::before{
+	content: "Zen Resources";
+}
+.design-selection h3, .design-archives h3, .zen-resources h3{
+	padding-top: 20px;
+}
+.design-selection:hover{
+	height: 450px;
+}
+.design-archives:hover{
+	height: 125px;
+}
+.zen-resources:hover{
+	height: 220px;
+}
+.design-selection{
+	right: 20px;
+}
+.design-archives{
+	right: 230px;
+}
+.zen-resources{
+	right: 440px;
 }
