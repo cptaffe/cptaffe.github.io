@@ -9,7 +9,6 @@ html{
 body{
 	font-family: 'Ubuntu', 'sans-serif';
 	margin: auto;
-	background-color: white;
 }
 /* useful... */
 .page-wrapper{}
@@ -22,6 +21,7 @@ a:hover{
 }
 
 header{
+	background-color: white;
 	color: rgb(60,60,60);
 	padding: 20px;
 }
