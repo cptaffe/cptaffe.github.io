@@ -102,6 +102,7 @@ div[role=article]>p{
 footer{
 	background-color: rgb(20,20,20);
 	padding: 10px 10px;
+	overflow: hidden;
 }
 footer>a, footer>a:visited{
 	color: rgb(150,150,150);
@@ -112,7 +113,6 @@ footer>a, footer>a:visited{
 footer>a:hover{
 	color: rgb(200,200,200);
 }
-
 /* 
 	This is the huge menu section, it does the stuff
 	for the menus at the top of the page, much code.
