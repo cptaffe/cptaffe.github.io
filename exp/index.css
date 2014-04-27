@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	background-color: rgb(40,40,40);
+}
+body{
+	font-family: 'Ubuntu', 'sans-serif';
+	margin: auto;
+	background-color: white;
+}
+/* useful... */
+.page-wrapper{}
+a, a:visited{
+	color: #4183C4;
+	text-decoration: none;
+}
+a:hover{
+	color: rgb(90, 160, 210);
+}
+
+header{
+	color: rgb(60,60,60);
+	padding: 20px;
+}
+header>h1{
+	font-weight: 200;
+	font-size: 20pt;
+}
+header>h2{
+	font-weight: 100;
+	font-size: 14px;
+	font-style: italic;
+	margin-top: 10px;
+}
+
+div[role=article]{
+	padding: 100px 10%;
+}
+div[role=article]>h3{
+	font-weight: 800;
+	font-size: 36px;
+	max-width: 750px;
+	margin: 10px auto;
+	margin-bottom: 40px;
+}
+div[role=article]>p{
+	color: white;
+	font-weight: 400;
+	background-color: rgba(20,20,20,1);
+	border: 5px solid rgb(60,60,60);
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 750px;
+	margin: 10px auto;
+	box-shadow: inset 0 0 5px black;
+}
+
+.summary{
+	color: white;
+	background: url(http://www.itsjustlight.com/wp-content/uploads/2014/01/long-exposure-photography-fishermen.jpg) no-repeat;
+	background-size: cover;
+}
+.preamble{
+	color: white;
+	background: url(http://wallpapersus.com/wp-content/uploads/2012/03/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
+	background-size: cover;
+}
+
+.main{
+	/* all sections after the preamble*/
+}
+
+.explanation{
+	color: white;
+	background: url(http://img1.wikia.nocookie.net/__cb20131006090531/powerlisting/images/6/63/SPACE_NEBULA_STARS.jpg) no-repeat;
+	background-size: cover;
+}
+
+.participation{
+	color: white;
+	background: url(http://www.geedew.com/wp-content/uploads/2013/08/Screen-shot-2013-08-11-at-1.40.08-AM.png) no-repeat;
+	background-size: cover;
+}
+.benefits{
+	color: white;
+	background: url(http://w8themes.com/wp-content/uploads/2013/09/Free-Mountain-Desktop-Backgrounds.jpg) no-repeat;
+	background-size: cover;
+}
+.requirements{
+	color: white;
+	/*background: url(http://www.mrwallpaper.com/wallpapers/space-stars-road.jpg) no-repeat;
+	*/
+	background: url(http://www.designmyprofile.com/images/graphics/backgrounds/background0172.jpg) no-repeat;
+	background-size: cover;
+}
+
+footer{
+	background-color: rgb(20,20,20);
+	padding: 10px 10px;
+}
+footer>a, footer>a:visited{
+	color: rgb(150,150,150);
+	border-radius: 5px;
+	padding: 5px 10px;
+	transition: all .2s ease;
+}
+footer>a:hover{
+	color: rgb(200,200,200);
+}
+
+/* 
+	This is the huge menu section, it does the stuff
+	for the menus at the top of the page, much code.
+*/
+
+/* Global for menus */
+.design-selection, .design-archives, .zen-resources{
+	overflow: hidden;
+	height: 15px;
+	width: 180px;
+	
+	color: rgb(180,180,180);
+	position: absolute;
+	top: 20px;
+	transition: all 0.5s ease;
+	
+	background-color: white;
+	padding: 10px;
+	
+	border-radius: 0 0 5px 5px;
+}
+.design-selection h3, .design-archives h3, .zen-resources h3{
+	width: 180px;
+}
+.design-selection ul, .design-archives ul, .zen-resources ul{
+	width: 180px;
+	color: rgb(80,80,80);
+	list-style-type: none;
+}
+.design-selection ul>li, .design-archives ul>li, .zen-resources ul>li{
+	display: block;
+	font-size: 14px;
+	/*background-color: rgb(40,40,40);*/
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+.design-selection ul>li:hover, .design-archives ul>li:hover, .zen-resources ul>li:hover{
+	/*background-color: rgb(50,50,50);*/
+}
+.design-selection ul>li>a, .design-archives ul>li>a, .zen-resources ul>li>a{
+	color: rgb(100,100,100);
+	transition: all .2s ease;
+}
+.design-selection ul>li>a:first-child, .design-archives ul>li>a:first-child, .zen-resources ul>li>a:first-child{
+	display: block;
+	color: rgb(150,150,150);
+}
+.design-selection ul>li>a:hover, .design-archives ul>li>a:hover, .zen-resources ul>li>a:hover{
+	color: rgb(200,200,200);
+}
+
+
+.design-selection:hover, .design-archives:hover, .zen-resources:hover{
+	/*background-color: rgba(20,20,20,0.8);*/
+	background-color: white;
+}
+.design-selection::before, .design-archives::before, .zen-resources::before{
+}
+
+/* Independent */
+.design-selection::before{
+	content: "Design Selection";
+}
+.design-archives::before{
+	content: "Design Archives";
+}
+.zen-resources::before{
+	content: "Zen Resources";
+}
+.design-selection h3, .design-archives h3, .zen-resources h3{
+	padding-top: 20px;
+}
+.design-selection:hover{
+	height: 450px;
+}
+.design-archives:hover{
+	height: 125px;
+}
+.zen-resources:hover{
+	height: 220px;
+}
+.design-selection{
+	right: 20px;
+}
+.design-archives{
+	right: 230px;
+}
+.zen-resources{
+	right: 440px;
+}
