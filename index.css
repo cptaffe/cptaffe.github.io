@@ -91,7 +91,9 @@ div[role=article]>p{
 }
 .requirements{
 	color: white;
-	background: url(http://www.mrwallpaper.com/wallpapers/space-stars-road.jpg) no-repeat;
+	/*background: url(http://www.mrwallpaper.com/wallpapers/space-stars-road.jpg) no-repeat;
+	*/
+	background: url(http://www.designmyprofile.com/images/graphics/backgrounds/background0172.jpg) no-repeat;
 	background-size: cover;
 }
 
