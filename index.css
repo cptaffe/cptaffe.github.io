@@ -135,7 +135,7 @@ footer>a:hover{
 	top: 0px;
 	transition: all 0.5s ease;
 	
-	background-color: rgb(20,20,20);
+	background-color: transparent;
 	padding: 10px;
 	padding-top: 30px;
 	
