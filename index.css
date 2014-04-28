@@ -1,18 +1,36 @@
+/*
+	Author: Connor Taffe
+	Date: April 2014
+	Dark Themed & Image Oriented
+*/
+
+/* Imports Google Fonts CSS for Ubuntu Font */
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+/* No default padding/margins for anything */
 *{
 	margin: 0;
 	padding: 0;
 }
+
+/* Dark Background color */
 html{
 	background-color: rgb(40,40,40);
 }
+
+/* Set Ubuntu Font as Default font */
 body{
 	font-family: 'Ubuntu', 'sans-serif';
+	
+	/* Center & minimum width b/c of abs. pos. menu */
 	margin: auto;
 	min-width: 1000px;
 }
+
 /* useful... */
 .page-wrapper{}
+
+/* Link styling, blue colors */
 a, a:visited{
 	color: #4183C4;
 	text-decoration: none;
@@ -22,6 +40,7 @@ a:hover{
 	color: rgb(90, 160, 210);
 }
 
+/* Header styling (Logo-ish thing @ top) */
 header{
 	background-color: rgb(20,20,20);
 	color: white;
@@ -30,15 +49,16 @@ header{
 }
 header>h1{
 	font-weight: 200;
-	font-size: 28px;
+	font-size: 28px;	/* In pixels for accurate height */
 }
 header>h2{
 	font-weight: 100;
 	font-size: 14px;
-	font-style: italic;
+	font-style: italic;	/* Italic styling, coolish */
 	margin-top: 10px;
 }
 
+/* Article divs styling */
 div[role=article]{
 	padding: 100px 10%;
 }
@@ -63,6 +83,7 @@ div[role=article]>p{
 	box-shadow: inset 0 0 5px black;
 }
 
+/* Background picture for each section */
 .summary{
 	color: white;
 	background: url(/img/long-exposure-photography-fishermen.jpg) no-repeat;
@@ -75,11 +96,13 @@ div[role=article]>p{
 	border-top: 10px solid rgb(20,20,20);
 }
 
+/* Border for all articles in main */
 .main>[role=article]{
 	/* all sections after the preamble*/
 	border-top: 10px solid rgb(20,20,20);
 }
 
+/* Background pictures for main sections */
 .explanation{
 	color: white;
 	background: url(/img/SPACE_NEBULA_STARS.jpg) no-repeat;
@@ -104,6 +127,7 @@ div[role=article]>p{
 	background-size: cover;
 }
 
+/* Footer Styling */
 footer{
 	background-color: rgb(20,20,20);
 	padding: 10px 10px;
@@ -119,6 +143,7 @@ footer>a, footer>a:visited{
 footer>a:hover{
 	color: rgb(200,200,200);
 }
+
 /* 
 	This is the huge menu section, it does the stuff
 	for the menus at the top of the page, much code.
@@ -174,8 +199,6 @@ footer>a:hover{
 .design-selection ul>li>a:hover, .design-archives ul>li>a:hover, .zen-resources ul>li>a:hover{
 	color: rgb(200,200,200);
 }
-
-
 .design-selection:hover, .design-archives:hover, .zen-resources:hover{
 	/*background-color: rgba(20,20,20,0.8);*/
 	background-color: rgb(20,20,20);
