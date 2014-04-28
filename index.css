@@ -9,7 +9,7 @@ html{
 body{
 	font-family: 'Ubuntu', 'sans-serif';
 	margin: auto;
-	min-width: 900px;
+	min-width: 1000px;
 }
 /* useful... */
 .page-wrapper{}
@@ -22,13 +22,14 @@ a:hover{
 }
 
 header{
-	background-color: white;
-	color: rgb(60,60,60);
+	background-color: rgb(20,20,20);
+	color: white;
 	padding: 20px;
+	border-bottom: 2px solid rgb(60,60,60);
 }
 header>h1{
 	font-weight: 200;
-	font-size: 20pt;
+	font-size: 28px;
 }
 header>h2{
 	font-weight: 100;
@@ -50,13 +51,15 @@ div[role=article]>h3{
 div[role=article]>p{
 	color: white;
 	font-weight: 400;
-	background-color: rgba(20,20,20,0.9);
-	border-radius: 5px;
+	background-color: rgba(20,20,20,1);
+	border: 5px solid rgb(60,60,60);
+	border-radius: 10px;
 	padding: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	max-width: 750px;
 	margin: 10px auto;
+	box-shadow: inset 0 0 5px black;
 }
 
 .summary{
@@ -68,10 +71,12 @@ div[role=article]>p{
 	color: white;
 	background: url(/img/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
 	background-size: cover;
+	border-top: 10px solid rgb(20,20,20);
 }
 
-.main{
+.main>[role=article]{
 	/* all sections after the preamble*/
+	border-top: 10px solid rgb(20,20,20);
 }
 
 .explanation{
@@ -101,6 +106,8 @@ div[role=article]>p{
 footer{
 	background-color: rgb(20,20,20);
 	padding: 10px 10px;
+	overflow: hidden;
+	border-top: 2px solid rgb(60,60,60);
 }
 footer>a, footer>a:visited{
 	color: rgb(150,150,150);
@@ -111,6 +118,10 @@ footer>a, footer>a:visited{
 footer>a:hover{
 	color: rgb(200,200,200);
 }
+/* 
+	This is the huge menu section, it does the stuff
+	for the menus at the top of the page, much code.
+*/
 
 /* Global for menus */
 .design-selection, .design-archives, .zen-resources{
@@ -120,15 +131,20 @@ footer>a:hover{
 	
 	color: rgb(180,180,180);
 	position: absolute;
-	top: 20px;
+	top: 0px;
 	transition: all 0.5s ease;
 	
-	background-color: white;
+	background-color: rgb(20,20,20);
 	padding: 10px;
+	padding-top: 30px;
+	
+	border: 2px solid transparent;
+	border-top: none;
 	
 	border-radius: 0 0 5px 5px;
 }
 .design-selection h3, .design-archives h3, .zen-resources h3{
+	visibility: hidden;
 	width: 180px;
 }
 .design-selection ul, .design-archives ul, .zen-resources ul{
@@ -161,7 +177,13 @@ footer>a:hover{
 
 .design-selection:hover, .design-archives:hover, .zen-resources:hover{
 	/*background-color: rgba(20,20,20,0.8);*/
-	background-color: white;
+	background-color: rgb(20,20,20);
+	border: 2px solid rgb(60,60,60);
+	border-top: none;
+	box-shadow: 0 0 15px black;
+}
+.design-selection::before, .design-archives::before, .zen-resources::before{
+	
 }
 
 /* Independent */
