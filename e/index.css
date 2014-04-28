@@ -70,6 +70,7 @@ div[role=article]>p{
 	color: white;
 	background: url(/img/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
 	background-size: cover;
+	border-top: 10px solid rgb(20,20,20);
 }
 
 .main>[role=article]{
@@ -176,8 +177,9 @@ footer>a:hover{
 .design-selection:hover, .design-archives:hover, .zen-resources:hover{
 	/*background-color: rgba(20,20,20,0.8);*/
 	background-color: rgb(20,20,20);
-	border: 2px solid white;
+	border: 2px solid rgb(60,60,60);
 	border-top: none;
+	box-shadow: 0 0 15px black;
 }
 .design-selection::before, .design-archives::before, .zen-resources::before{
 	
