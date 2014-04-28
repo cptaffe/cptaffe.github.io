@@ -71,8 +71,9 @@ div[role=article]>p{
 	background-size: cover;
 }
 
-.main{
+.main>[role=article]{
 	/* all sections after the preamble*/
+	border-top: 5px solid rgb(60,60,60);
 }
 
 .explanation{
