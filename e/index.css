@@ -9,6 +9,7 @@ html{
 body{
 	font-family: 'Ubuntu', 'sans-serif';
 	margin: auto;
+	min-width: 1000px;
 }
 /* useful... */
 .page-wrapper{}
@@ -128,11 +129,12 @@ footer>a:hover{
 	
 	color: rgb(180,180,180);
 	position: absolute;
-	top: 20px;
+	top: 0px;
 	transition: all 0.5s ease;
 	
 	background-color: rgb(20,20,20);
 	padding: 10px;
+	padding-top: 30px;
 	
 	border: 2px solid transparent;
 	border-top: none;
@@ -178,6 +180,7 @@ footer>a:hover{
 	border-top: none;
 }
 .design-selection::before, .design-archives::before, .zen-resources::before{
+	
 }
 
 /* Independent */
