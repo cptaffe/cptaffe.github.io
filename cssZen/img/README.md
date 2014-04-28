@@ -14,6 +14,6 @@ by Trey Ratcliff on [flickr](https://flic.kr/p/tpdhs)
 ![Unknown](Free-Mountain-Desktop-Backgrounds.jpg)
 by Unknown
 
-_please contact if you have knowledge of this image's rightsholder_
+_Please contact me if you have knowledge of this image's rightsholder_
 
 
