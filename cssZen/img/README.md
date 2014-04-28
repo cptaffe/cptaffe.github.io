@@ -5,5 +5,5 @@ These photos are not mine, but are used for educational purposes, and pose no th
 
 
 ## The Veins of Bangkok
-![cityscapes-city-night-photography-long-exposure.jpg](http://1-ps.googleusercontent.com/x/www.stuckincustoms.com/farm1.static.flickr.com/112/900xNx310074290_8c6e70b050_b.jpg.pagespeed.ic.ThHpia3Ylb.webp)
+![The Viens of Bangkok](cityscapes-city-night-photography-long-exposure.jpg)
 by Trey Ratcliff[cite](https://flic.kr/p/tpdhs)
