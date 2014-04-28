@@ -152,7 +152,7 @@ footer>a:hover{
 /* Global for menus */
 .design-selection, .design-archives, .zen-resources{
 	overflow: hidden;
-	height: 15px;
+	max-height: 15px;
 	width: 180px;
 	
 	color: rgb(180,180,180);
@@ -224,13 +224,16 @@ footer>a:hover{
 	padding-top: 20px;
 }
 .design-selection:hover{
-	height: 450px;
+	max-height: 460px;
+	/*height: 450px;*/
 }
 .design-archives:hover{
-	height: 125px;
+	max-height: 130px;
+	/*height: 125px;*/
 }
 .zen-resources:hover{
-	height: 220px;
+	max-height: 230px;
+	/*height: 220px;*/
 }
 .design-selection{
 	right: 20px;
