@@ -86,12 +86,12 @@ div[role=article]>p{
 /* Background picture for each section */
 .summary{
 	color: white;
-	background: url(/img/long-exposure-photography-fishermen.jpg) no-repeat;
+	background: url(./img/long-exposure-photography-fishermen.jpg) no-repeat;
 	background-size: cover;
 }
 .preamble{
 	color: white;
-	background: url(/img/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
+	background: url(./img/cityscapes-city-night-photography-long-exposure.jpg) no-repeat;
 	background-size: cover;
 	border-top: 10px solid rgb(20,20,20);
 }
@@ -105,25 +105,25 @@ div[role=article]>p{
 /* Background pictures for main sections */
 .explanation{
 	color: white;
-	background: url(/img/SPACE_NEBULA_STARS.jpg) no-repeat;
+	background: url(./img/SPACE_NEBULA_STARS.jpg) no-repeat;
 	background-size: cover;
 }
 
 .participation{
 	color: white;
-	background: url(/img/Screen-shot-2013-08-11-at-1.40.08-AM.png) no-repeat;
+	background: url(./img/Screen-shot-2013-08-11-at-1.40.08-AM.png) no-repeat;
 	background-size: cover;
 }
 .benefits{
 	color: white;
-	background: url(/img/Free-Mountain-Desktop-Backgrounds.jpg) no-repeat;
+	background: url(./img/Free-Mountain-Desktop-Backgrounds.jpg) no-repeat;
 	background-size: cover;
 }
 .requirements{
 	color: white;
 	/*background: url(http://www.mrwallpaper.com/wallpapers/space-stars-road.jpg) no-repeat;
 	*/
-	background: url(/img/background0172.jpg) no-repeat;
+	background: url(./img/background0172.jpg) no-repeat;
 	background-size: cover;
 }
 
