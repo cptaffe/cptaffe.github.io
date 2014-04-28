@@ -73,7 +73,7 @@ div[role=article]>p{
 
 .main>[role=article]{
 	/* all sections after the preamble*/
-	border-top: 5px solid rgb(60,60,60);
+	border-top: 5px solid rgb(20,20,20);
 }
 
 .explanation{
