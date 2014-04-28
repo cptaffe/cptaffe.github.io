@@ -63,8 +63,8 @@ div[role=article]>p{
 
 .summary{
 	color: white;
-	background: url(/img/long-exposure-photography-fishermen.jpg) no-repeat;
-	background-size: cover;
+	/*background: url(/img/long-exposure-photography-fishermen.jpg) no-repeat;
+	background-size: cover;*/
 }
 .preamble{
 	color: white;
