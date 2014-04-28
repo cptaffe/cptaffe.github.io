@@ -172,7 +172,7 @@ footer>a:hover{
 .design-selection:hover, .design-archives:hover, .zen-resources:hover{
 	/*background-color: rgba(20,20,20,0.8);*/
 	background-color: rgb(20,20,20);
-	border: 2px solid rgb(150,150,150);
+	border: 2px solid white;
 	border-top: none;
 }
 .design-selection::before, .design-archives::before, .zen-resources::before{
