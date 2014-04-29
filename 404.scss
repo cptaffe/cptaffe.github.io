@@ -4,6 +4,8 @@
 
 $basebcolor: rgb(20,20,20);
 $basecolor: white;
+
+// MUST use font-weight 100 (Lato)
 $headFont: 'Lato', 'sans-serif';
 $bodyFont: 'Ubuntu', 'sans-serif';
 
@@ -21,4 +23,5 @@ html{
 
 h1{
 	font-family: $headFont;
+	font-weight: 100;
 }
