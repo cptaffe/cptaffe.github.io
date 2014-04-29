@@ -5,7 +5,7 @@ $basecolor: white;
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Sans'), url(/fonts/Droid_Sans/DroidSans.ttf) format('woff');
+  src: url(/fonts/Droid_Sans/DroidSans.ttf) format('woff');
 }
 
 @font-face {
