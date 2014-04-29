@@ -1,9 +1,11 @@
 // import a google font
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
 
 $basebcolor: rgb(20,20,20);
 $basecolor: white;
-$font: 'Ubuntu', 'sans-serif';
+$headFont: 'Lato', 'sans-serif';
+$bodyFont: 'Ubuntu', 'sans-serif';
 
 html{
 	// color scheme
@@ -14,5 +16,9 @@ html{
 	text-align: center;
 	
 	// font
-	font-family: $font;
+	font-family: $bodyFont;
+}
+
+h1{
+	font-family: $headFont;
 }
