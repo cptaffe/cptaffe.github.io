@@ -9,6 +9,11 @@ $basecolor: white;
 $headFont: 'Lato', 'sans-serif';
 $bodyFont: 'Ubuntu', 'sans-serif';
 
+*{
+	padding: none;
+	margin: none;
+}
+
 html{
 	// color scheme
 	background-color: $basebcolor;
@@ -24,7 +29,7 @@ html{
 h1{
 	font-family: $headFont;
 	font-weight: 100;
-	font-size: 72px;
+	font-size: 150px;
 }
 
 // Testing
