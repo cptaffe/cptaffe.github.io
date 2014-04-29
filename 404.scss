@@ -12,7 +12,7 @@ $basecolor: white;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('woff');
+  src: local('Ubuntu'), url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
 }
 
 // MUST use font-weight 100 (Lato)
