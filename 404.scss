@@ -5,14 +5,14 @@ $basecolor: white;
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Sans'), url(/fonts/Droid_Sans/DroidSans.ttf) format('ttf');
+  src: local('Droid Sans'), url(/fonts/Droid_Sans/DroidSans.ttf) format('woff');
 }
 
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('ttf');
+  src: local('Ubuntu'), url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('woff');
 }
 
 // MUST use font-weight 100 (Lato)
