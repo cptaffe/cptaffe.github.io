@@ -1,5 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Lato:100);
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu"), url(/fonts/Droid_Sans/DroidSans.ttf) format("ttf"); }
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu"), url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format("ttf"); }
 * {
   padding: none;
   margin: none; }
