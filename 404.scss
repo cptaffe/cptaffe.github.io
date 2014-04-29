@@ -1,19 +1,9 @@
+// Google fonts
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
 $basebcolor: rgb(20,20,20);
 $basecolor: white;
-
-@font-face {
-  font-family: 'Droid Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/Droid_Sans/DroidSans.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Ubuntu'), url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
-}
 
 // MUST use font-weight 100 (Lato)
 $headFont: 'Droid Sans', 'sans-serif';
