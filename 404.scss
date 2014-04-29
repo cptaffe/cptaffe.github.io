@@ -1,13 +1,11 @@
 // Google fonts
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 $basebcolor: rgb(20,20,20);
 $basecolor: white;
 
 // MUST use font-weight 100 (Lato)
-$headFont: 'Droid Sans', 'sans-serif';
-$bodyFont: 'Ubuntu', 'sans-serif';
+$fontstack: 'Ubuntu', 'sans-serif';
 
 *{
 	padding: none;
@@ -21,11 +19,11 @@ html{
 }
 body{
 	// font
-	font-family: $bodyFont;
+	font-family: $fontstack;
 	// sort of tacky now, but whatevs
 	text-align: center;
 }
 h1{
 	// font
-	font-family: $headFont;
+	font-family: $fontstack;
 }
