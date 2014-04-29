@@ -14,6 +14,11 @@
 
 html {
   background-color: #141414;
-  color: white;
-  text-align: center;
-  font-family: "Ubuntu", "sans-serif"; }
+  color: white; }
+
+body {
+  font-family: "Ubuntu", "sans-serif";
+  text-align: center; }
+
+h1 {
+  font-family: "Droid Sans", "sans-serif"; }

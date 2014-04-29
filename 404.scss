@@ -5,7 +5,7 @@ $basecolor: white;
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu'), url(/fonts/Droid_Sans/DroidSans.ttf) format('ttf');
+  src: local('Droid Sans'), url(/fonts/Droid_Sans/DroidSans.ttf) format('ttf');
 }
 
 @font-face {
@@ -28,10 +28,14 @@ html{
 	// color scheme
 	background-color: $basebcolor;
 	color: $basecolor;
-	
-	// sort of tacky now, but whatevs
-	text-align: center;
-	
+}
+body{
 	// font
 	font-family: $bodyFont;
+	// sort of tacky now, but whatevs
+	text-align: center;
+}
+h1{
+	// font
+	font-family: $headFont;
 }
