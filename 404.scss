@@ -1,0 +1,11 @@
+$basebcolor: rgb(20,20,20);
+$basecolor: white;
+
+html{
+	// color scheme
+	background-color: $basebcolor;
+	color: $basecolor;
+	
+	// sort of tacky now, but whatevs
+	text-align: center;
+}
