@@ -5,7 +5,7 @@ $basecolor: white;
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Droid_Sans/DroidSans.ttf) format('woff');
+  src: url(/fonts/Droid_Sans/DroidSans.ttf) format('ttf');
 }
 
 @font-face {
@@ -38,5 +38,4 @@ body{
 h1{
 	// font
 	font-family: $headFont;
-	font-weight: 100;
 }
