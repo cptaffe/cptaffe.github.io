@@ -9,7 +9,8 @@ html {
 
 body {
   font-family: "Ubuntu", "sans-serif";
-  text-align: center; }
+  text-align: center;
+  padding-top: 50px; }
 
 h1 {
   font-family: "Ubuntu", "sans-serif"; }
