@@ -1,5 +1,9 @@
+// import a google font
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
 $basebcolor: rgb(20,20,20);
 $basecolor: white;
+$font: 'Ubuntu', 'sans-serif';
 
 html{
 	// color scheme
@@ -8,4 +12,7 @@ html{
 	
 	// sort of tacky now, but whatevs
 	text-align: center;
+	
+	// font
+	font-family: $font;
 }
