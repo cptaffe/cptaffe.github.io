@@ -8,8 +8,6 @@ h1 {
   max-width: 750px;
   margin: 10px auto;
   margin-bottom: 40px; }
-  h1 :first-child {
-    margin-top: 40px; }
 
 p {
   max-width: 750px;
