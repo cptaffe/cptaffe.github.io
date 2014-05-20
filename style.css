@@ -41,4 +41,5 @@ a:hover {
   #issue button {
     width: 100px;
     outline: none;
-    background-color: blue; }
+    background-color: blue;
+    border: 0; }
