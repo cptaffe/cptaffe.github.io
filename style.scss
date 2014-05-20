@@ -51,11 +51,9 @@ a:hover{
 	#report{
 		cursor: pointer;
 		margin: 5px 0;
+		margin-bottom: 10px;
 	}
 	textarea, input{
-		:first-child{
-			margin-top: 10px;
-		}
 		font-family: $fontstack;
 		font-size: 12px;
 		border-radius: 2.5px;
