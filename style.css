@@ -33,6 +33,7 @@ a:hover {
 #issue {
   background-color: #282828;
   padding: 0 10px;
+  border-radius: 5px;
   overflow: hidden;
   height: 20px;
   transition: ease 0.5s all;
