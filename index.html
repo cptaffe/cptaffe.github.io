@@ -27,6 +27,7 @@
 		<script>
 		function mailIssue(){
 			var issue = document.getElementById("issue").getElementsByTagName("textarea")[0];
+			msg = issue.value;
 			if (msg == ""){
 				console.log("No message?!");
 				issue.style.borderColor = "red";
