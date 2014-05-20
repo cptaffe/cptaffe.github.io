@@ -43,7 +43,8 @@ a:hover {
     padding: 5px;
     border-style: solid;
     border-width: 1px;
-    border-color: transparent; }
+    border-color: transparent;
+    transition: ease 0.5s all; }
   #issue button {
     width: 100px;
     outline: none;
