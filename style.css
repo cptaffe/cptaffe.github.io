@@ -28,3 +28,7 @@ a, a:visited {
 
 a:hover {
   color: #5aa0d2; }
+
+#issue {
+  border-radius: 5px;
+  border: 0; }
