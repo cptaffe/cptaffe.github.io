@@ -54,7 +54,7 @@ a:hover{
 		margin-bottom: 15px;
 	}
 	textarea, input{
-		:first-child{
+		::first-child{
 			color: red;
 		}
 		font-family: $fontstack;

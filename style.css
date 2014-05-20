@@ -57,7 +57,7 @@ a:hover {
     border-width: 1px;
     border-color: transparent;
     transition: ease 0.5s all; }
-    #issue textarea :first-child, #issue input :first-child {
+    #issue textarea ::first-child, #issue input ::first-child {
       color: red; }
   #issue button {
     width: 100px;
