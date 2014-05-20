@@ -3,6 +3,11 @@
 
 $fontstack: "Ubuntu", sans-serif;
 
+*{
+	padding: 0;
+	margin: 0;
+}
+
 body{
 	max-width: 750px;
 	margin: auto;

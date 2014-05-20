@@ -1,4 +1,8 @@
 @import url("http://fonts.googleapis.com/css?family=Ubuntu");
+* {
+  padding: 0;
+  margin: 0; }
+
 body {
   max-width: 750px;
   margin: auto;
