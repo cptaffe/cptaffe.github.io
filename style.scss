@@ -39,10 +39,11 @@ a:hover{
 }
 
 #issue{
+	$issuew: 200px;
+	background-color: rgb(40,40,40);
 	overflow: hidden;
 	height: 20px;
 	transition: ease 0.5s all;
-	$issuew: 200px;
 	width: $issuew;
 	#report{
 		cursor: pointer;
