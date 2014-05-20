@@ -33,6 +33,7 @@ a:hover {
   width: 200px; }
   #issue textarea {
     font-family: "Ubuntu", sans-serif;
+    font-size: 12px;
     border-radius: 5px;
     border: 0;
     outline: none;
