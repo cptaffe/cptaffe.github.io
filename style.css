@@ -38,3 +38,5 @@ a:hover {
     outline: none;
     resize: none;
     width: 200px; }
+  #issue button {
+    width: 100px; }
