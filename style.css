@@ -30,6 +30,7 @@ a:hover {
   color: #5aa0d2; }
 
 #issue {
+  visibility: hidden;
   width: 200px; }
   #issue textarea {
     font-family: "Ubuntu", sans-serif;

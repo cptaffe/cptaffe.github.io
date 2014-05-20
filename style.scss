@@ -38,6 +38,7 @@ a:hover{
 }
 
 #issue{
+	visibility: hidden;
 	$issuew: 200px;
 	width: $issuew;
 	textarea{
