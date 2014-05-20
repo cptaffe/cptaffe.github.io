@@ -33,4 +33,5 @@ a:hover {
   border-radius: 5px;
   border: 0;
   outline: none;
-  padding: 5px; }
+  padding: 5px;
+  resize: none; }
