@@ -14,16 +14,17 @@ body{
 	padding-top: 20px;
 	font-family: $fontstack;
 }
-
 h1{
 	font-weight: 800;
 	font-size: 36px;
-	margin: 10px 0;
+	margin: 5px 0;
 	margin-bottom: 40px;
 }
-p{
-	max-width: 750px;
-	margin: 10px 0;
+article{
+	margin-top: 10px;
+	p{
+		margin: 5px 0;
+	}
 }
 
 a, a:visited{
