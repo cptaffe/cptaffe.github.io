@@ -1,0 +1,34 @@
+// Imports Google Fonts CSS for Ubuntu Font
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+$fontstack: sans-serif, "Ubuntu";
+
+body{
+	font-family: $fontstack;
+}
+
+h1{
+	font-size: 20px;
+	font-weight: 400;
+}
+p{
+	color: white;
+	font-weight: 400;
+	background-color: rgba(20,20,20,1);
+	border: 5px solid rgb(60,60,60);
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 750px;
+	margin: 10px auto;
+	box-shadow: inset 0 0 5px black;
+}
+a, a:visited{
+	color: #4183C4;
+	text-decoration: none;
+	transition: all .2s ease;
+}
+a:hover{
+	color: rgb(90, 160, 210);
+}
