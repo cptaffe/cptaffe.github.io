@@ -17,11 +17,10 @@
 		</article>
 
 		<!--Issue reporting-->
-		<p><a id="report" onclick="if (document.getElementById('issue').style.visibility == 'hidden'){document.getElementById('issue').style.visibility = 'visible';}else{document.getElementById('issue').style.visibility = 'hidden';}">&ltIssues&gt</a></p>
-
 		<div id="issue">
-		<textarea placeholder="Issue description."></textarea>
-		<button onclick="mailIssue();">Create Issue</button>
+			<p><a id="report">&ltIssues&gt</a></p>
+			<textarea placeholder="Issue description."></textarea>
+			<button onclick="mailIssue();">Create Issue</button>
 		</div>
 
 		<script>
