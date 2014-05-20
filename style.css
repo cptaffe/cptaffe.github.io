@@ -42,4 +42,6 @@ a:hover {
     width: 100px;
     outline: none;
     background-color: blue;
-    border: 0; }
+    border: 0;
+    padding: 5px;
+    border-radius: 5px; }
