@@ -37,6 +37,10 @@ a:hover{
 	color: rgb(90, 160, 210);
 }
 
+#report{
+	cursor: pointer;
+}
+
 #issue{
 	visibility: hidden;
 	$issuew: 200px;
