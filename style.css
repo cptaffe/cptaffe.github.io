@@ -29,12 +29,10 @@ a, a:visited {
 a:hover {
   color: #5aa0d2; }
 
-#report {
-  cursor: pointer; }
-
 #issue {
-  visibility: hidden;
   width: 200px; }
+  #issue #report {
+    cursor: pointer; }
   #issue textarea {
     font-family: "Ubuntu", sans-serif;
     font-size: 12px;
