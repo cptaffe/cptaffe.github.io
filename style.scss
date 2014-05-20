@@ -54,9 +54,6 @@ a:hover{
 		margin-bottom: 15px;
 	}
 	textarea, input{
-		::first-child{
-			color: red;
-		}
 		font-family: $fontstack;
 		font-size: 12px;
 		border-radius: 2.5px;
@@ -70,6 +67,9 @@ a:hover{
 		border-width: 1px;
 		border-color: transparent;
 		transition: ease 0.5s all;
+	}
+	input{
+		padding-top: 10px;
 	}
 	button{
 		:hover{
