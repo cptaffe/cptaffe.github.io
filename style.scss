@@ -54,6 +54,9 @@ a:hover{
 		margin-bottom: 15px;
 	}
 	textarea, input{
+		:first-child{
+			color: red;
+		}
 		font-family: $fontstack;
 		font-size: 12px;
 		border-radius: 2.5px;
