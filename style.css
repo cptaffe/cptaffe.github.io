@@ -30,11 +30,11 @@ a:hover {
   color: #5aa0d2; }
 
 #issue {
-  width: 100px; }
+  width: 200px; }
   #issue textarea {
     font-family: "Ubuntu", sans-serif;
     border-radius: 5px;
     border: 0;
     outline: none;
     resize: none;
-    width: 100px; }
+    width: 200px; }
