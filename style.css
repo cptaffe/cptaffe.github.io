@@ -62,4 +62,4 @@ a:hover {
     cursor: pointer; }
 
 #issue:hover {
-  height: 200px; }
+  max-height: 200px; }
