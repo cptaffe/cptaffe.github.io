@@ -39,6 +39,8 @@ a:hover{
 }
 
 #issue{
+	overflow: hidden;
+	height: 30px;
 	$issuew: 200px;
 	width: $issuew;
 	#report{
@@ -69,4 +71,7 @@ a:hover{
 		border-radius: 5px;
 		cursor: pointer;
 	}
+}
+#issue:hover{
+	max-height: 200px;
 }

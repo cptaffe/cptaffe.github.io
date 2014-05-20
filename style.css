@@ -31,6 +31,8 @@ a:hover {
   color: #5aa0d2; }
 
 #issue {
+  overflow: hidden;
+  height: 30px;
   width: 200px; }
   #issue #report {
     cursor: pointer; }
@@ -57,3 +59,6 @@ a:hover {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer; }
+
+#issue:hover {
+  max-height: 200px; }
