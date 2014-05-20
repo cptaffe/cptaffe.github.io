@@ -58,7 +58,7 @@ a:hover {
     border-color: transparent;
     transition: ease 0.5s all; }
   #issue input {
-    padding-top: 10px; }
+    margin-top: 10px; }
   #issue button {
     width: 100px;
     outline: none;
