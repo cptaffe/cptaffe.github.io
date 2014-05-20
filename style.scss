@@ -38,10 +38,14 @@ a:hover{
 }
 
 #issue{
-	font-family: $fontstack;
-	border-radius: 5px;
-	border: 0;
-	outline: none;
-	resize: none;
-
+	$issuew: 100px;
+	width: $issuew;
+	textarea{
+		font-family: $fontstack;
+		border-radius: 5px;
+		border: 0;
+		outline: none;
+		resize: none;
+		width: $issuew;
+	}
 }
