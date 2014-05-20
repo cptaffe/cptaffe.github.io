@@ -35,7 +35,7 @@ a:hover {
   padding: 5px 10px;
   border-radius: 5px;
   overflow: hidden;
-  height: 20px;
+  max-height: 20px;
   transition: ease 0.5s all;
   width: 200px; }
   #issue #report {
@@ -65,4 +65,4 @@ a:hover {
     cursor: pointer; }
 
 #issue:hover {
-  height: 200px; }
+  max-height: 60px; }
