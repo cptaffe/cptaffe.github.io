@@ -42,7 +42,7 @@ a:hover {
   #issue #report {
     cursor: pointer;
     margin: 5px 0;
-    margin-bottom: 10px; }
+    padding-bottom: 10px; }
   #issue textarea, #issue input {
     font-family: "Ubuntu", sans-serif;
     font-size: 12px;
