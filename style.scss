@@ -41,6 +41,7 @@ a:hover{
 #issue{
 	overflow: hidden;
 	height: 30px;
+	transition: ease 0.5s all;
 	$issuew: 200px;
 	width: $issuew;
 	#report{
