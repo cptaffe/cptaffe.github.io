@@ -38,7 +38,8 @@ a:hover {
     border: 0;
     outline: none;
     resize: none;
-    width: 200px; }
+    width: 200px;
+    margin: 0 10px; }
   #issue button {
     width: 100px;
     outline: none;
