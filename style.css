@@ -59,11 +59,13 @@ a:hover {
     width: 100px;
     outline: none;
     color: white;
-    background-color: #5aa0d2;
+    background-color: #4183C4;
     border: 0;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer; }
+    #issue button :hover {
+      background-color: #5aa0d2; }
 
 #issue:hover {
   max-height: 120px; }

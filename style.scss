@@ -67,10 +67,13 @@ a:hover{
 		transition: ease 0.5s all;
 	}
 	button{
+		:hover{
+			background-color: rgb(90, 160, 210);
+		}
 		width: $issuew / 2;
 		outline: none;
 		color: white;
-		background-color: rgb(90, 160, 210);
+		background-color: #4183C4;
 		border: 0;
 		padding: 5px;
 		border-radius: 5px;
