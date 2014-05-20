@@ -19,6 +19,7 @@
 		<!--Issue reporting-->
 		<div id="issue">
 			<p><a id="report">Issues</a></p>
+			<input placeholder="Optional email"></input>
 			<textarea placeholder="Issue description."></textarea>
 			<button onclick="mailIssue();">Create Issue</button>
 		</div>
@@ -26,11 +27,15 @@
 		<script>
 		function mailIssue(){
 			var issue = document.getElementById("issue").getElementsByTagName("textarea")[0];
+			var from = document.getElementById("issue").getElementsByTagName("input")[0].value;
 			var msg = issue.value;
 			if (msg == ""){
 				console.log("No message?!");
 				issue.style.borderColor = "red";
 				return;
+			}
+			if (from == ""){
+				from = "anon@a.non"
 			}
 			$.ajax({
 			  type: "POST",
@@ -38,7 +43,7 @@
 			  data: {
 			    'key': '4Lc9q5cvJIa5XrepsHIKPg',
 			    'message': {
-			      'from_email': 'anon@a.non',
+			      'from_email': from,
 			      'to': [
 			          {
 			            'email': 'cpaynetaffe@gmail.com',
