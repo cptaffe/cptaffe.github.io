@@ -39,7 +39,8 @@ a:hover {
     outline: none;
     resize: none;
     width: 200px;
-    margin: 10px 0; }
+    margin: 10px 0;
+    padding: 5px; }
   #issue button {
     width: 100px;
     outline: none;
