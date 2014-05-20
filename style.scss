@@ -4,6 +4,8 @@
 $fontstack: "Ubuntu", sans-serif;
 
 body{
+	max-width: 750px;
+	margin: auto;
 	padding-top: 20px;
 	font-family: $fontstack;
 }
@@ -11,13 +13,12 @@ body{
 h1{
 	font-weight: 800;
 	font-size: 36px;
-	max-width: 750px;
-	margin: 10px auto;
+	margin: 10px 0;
 	margin-bottom: 40px;
 }
 p{
 	max-width: 750px;
-	margin: 10px auto;
+	margin: 10px 0;
 }
 
 a, a:visited{

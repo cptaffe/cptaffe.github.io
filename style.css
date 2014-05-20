@@ -1,18 +1,19 @@
 @import url("http://fonts.googleapis.com/css?family=Ubuntu");
 body {
+  max-width: 750px;
+  margin: auto;
   padding-top: 20px;
   font-family: "Ubuntu", sans-serif; }
 
 h1 {
   font-weight: 800;
   font-size: 36px;
-  max-width: 750px;
-  margin: 10px auto;
+  margin: 10px 0;
   margin-bottom: 40px; }
 
 p {
   max-width: 750px;
-  margin: 10px auto; }
+  margin: 10px 0; }
 
 a, a:visited {
   color: #4183C4;
