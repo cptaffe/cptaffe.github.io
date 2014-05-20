@@ -45,4 +45,5 @@ a:hover {
     background-color: #5aa0d2;
     border: 0;
     padding: 5px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    cursor: pointer; }
