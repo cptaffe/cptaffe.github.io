@@ -32,6 +32,7 @@ a:hover {
 
 #issue {
   background-color: #282828;
+  padding: 10px 0;
   overflow: hidden;
   height: 20px;
   transition: ease 0.5s all;
