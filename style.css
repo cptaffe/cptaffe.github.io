@@ -30,6 +30,7 @@ a:hover {
   color: #5aa0d2; }
 
 #issue {
+  font-family: "Ubuntu", sans-serif;
   border-radius: 5px;
   border: 0;
   outline: none;
