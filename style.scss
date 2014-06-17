@@ -15,12 +15,20 @@ body{
 	padding-top: 20px;
 	font-family: $fontstack;
 }
-h1{
+
+#begin{
 	font-weight: 800;
 	font-size: 36px;
 	margin: 5px 0;
 	margin-bottom: 40px;
 }
+#end{
+	font-weight: 800;
+	font-size: 36px;
+	margin: 5px 0;
+	margin-top: 40px;
+}
+
 article{
 	margin-top: 15px;
 	p{
