@@ -23,7 +23,8 @@ body {
   margin-top: 40px; }
 
 article {
-  margin-top: 15px; }
+  margin-top: 20px;
+  margin-left: 10px; }
   article p {
     margin: 5px 0;
     font-size: 15px; }
