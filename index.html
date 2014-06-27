@@ -20,59 +20,7 @@
 		<article>
 			<p>Example of my awesome CSS skills: <a href='./css-zen'>css zen</a> (<a href="https://github.com/cptaffe/css-zen/">github</a>). Images are given proper citation on the github page to the best of my ability.</p>
 		</article>
-		<article>
-			<h3>Future Plans</h3>
-			<p>This will eventually be a communistic domain operated by me, Connor Taffe (<a href="http://github.com/cptaffe">@cptaffe</a>). I plan to delegate a 3rd level domain to each person, who can then delegate further subdomains to their personal servers. Other 3rd level domains of this domain may contain an ftp, torrent listing, etc. </p>
-		</article>
 
 		<h1 id='end'>}</h1>
-
-		<!--Issue reporting>
-		<div id="issue">
-			<p><a id="report">Issues</a></p>
-			<input type="email" placeholder="Optional email"></input>
-			<textarea placeholder="Issue description."></textarea>
-			<button onclick="mailIssue();">Create Issue</button>
-		</div>
-
-		<script>
-		function mailIssue(){
-			var issue = document.getElementById("issue").getElementsByTagName("textarea")[0];
-			var from = document.getElementById("issue").getElementsByTagName("input")[0].value;
-			var msg = issue.value;
-			if (msg == ""){
-				console.log("No message?!");
-				issue.style.borderColor = "red";
-				return;
-			}
-			if (from == ""){
-				from = "anon@a.non"
-			}
-			$.ajax({
-			  type: "POST",
-			  url: "https://mandrillapp.com/api/1.0/messages/send.json",
-			  data: {
-			    'key': '4Lc9q5cvJIa5XrepsHIKPg',
-			    'message': {
-			      'from_email': from,
-			      'to': [
-			          {
-			            'email': 'cpaynetaffe@gmail.com',
-			            'name': 'Connor Taffe',
-			            'type': 'to'
-			          }
-			        ],
-			      'autotext': 'true',
-			      'subject': 'Byteflame Issue',
-			      'html': '<b>Issue:</b> <br/>'+ msg
-			    }
-			  }
-			 }).done(function(response) {
-			   console.log(response); // if you're into that sorta thing
-			   issue.value = '';
-			 });
-		}
-		</script-->
-
 	</body>
 </html>
