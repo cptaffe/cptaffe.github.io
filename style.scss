@@ -9,6 +9,7 @@ $fontstack: "Ubuntu", sans-serif;
 }
 
 body{
+	background-color: rgb(245, 245, 245);
 	max-width: 750px;
 	padding: 0 10%;
 	margin: auto;
@@ -17,16 +18,20 @@ body{
 }
 
 #begin{
+	color: rgba(200, 200, 200, 0.5);
 	font-weight: 800;
 	font-size: 36px;
 	margin: 5px 0;
+	margin-left: -5%;
 	margin-bottom: 40px;
 
 }
 #end{
+	color: rgba(200, 200, 200, 0.5);
 	font-weight: 800;
 	font-size: 36px;
 	margin: 5px 0;
+	margin-left: -5%;
 	margin-top: 40px;
 }
 
