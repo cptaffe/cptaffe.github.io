@@ -9,6 +9,36 @@
 		<!-- Lame JavaScript -->
 
 		<script>
+		// kunami
+		var kunami = 0;
+		function kunami_code(e) {
+			console.log("kunami"+e.which+kunami);
+			if (kunami < 2) {
+				if(e.which == 38){kunami++;} // up, up
+				else {kunami = 0;}
+			} else if (kunami >= 2 && kunami < 4) {
+				if(e.which == 40){kunami++;} // down, down
+				else {kunami = 0;}
+			} else if (kunami == 4 || kunami == 6) {
+				if(e.which == 37){kunami++;} // left
+				else {kunami = 0;}
+			} else if (kunami == 5 || kunami == 7) {
+				if(e.which == 39){kunami++;} // right
+				else {kunami = 0;}
+			} else if (kunami == 8) {
+				if(e.which == 66){kunami++;} // B
+				else {kunami = 0;}
+			} else if (kunami == 9) {
+				if(e.which == 65){kunami++;} // B
+				else {kunami = 0;}
+			} else if (kunami == 10) {
+				if (e.which == 13) {
+					loadPage("Konami");
+					kunami = 0;
+				}
+			}
+		}
+
 		var sites = ["Ramblings", "Projects"];
 		var index = Math.round(Math.random() * (sites.length - 1));
 
@@ -45,6 +75,7 @@
 				}
 				loadPage(sites[key]);
 			} else {
+				if (kunami > 0){kunami_code(e);}
 				switch(e.which) {
 			        case 37: // left
 			        prevPage();
@@ -52,6 +83,10 @@
 
 			        case 39: // right
 			        nextPage();
+			        break;
+
+			        case 38: // first kunami code char
+			        if (kunami == 0){kunami_code(e);}
 			        break;
 
 			        default: return; // exit this handler for other keys
