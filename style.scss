@@ -49,3 +49,25 @@ a, a:visited{
 a:hover{
 	color: rgb(90, 160, 210);
 }
+
+#buttons {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-bottom: 10px;
+}
+
+#buttons>div {
+	padding: 2px;
+	margin: 5px;
+	color: #4183C4;
+	//border-width: 0px;
+	//border-left-width: 5px;
+	//border-style: solid;
+	//border-color: rgb(100,100,100);
+	display: inline;
+	cursor: pointer;
+}

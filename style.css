@@ -38,3 +38,19 @@ a, a:visited {
 
 a:hover {
   color: #5aa0d2; }
+
+#buttons {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 10px; }
+
+#buttons > div {
+  padding: 2px;
+  margin: 5px;
+  color: #4183C4;
+  display: inline;
+  cursor: pointer; }

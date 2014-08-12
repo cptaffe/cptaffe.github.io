@@ -9,13 +9,45 @@
 		<!-- Lame JavaScript -->
 
 		<script>
+		var sites = ["Ramblings", "Projects"];
+		var index = Math.round(Math.random() * (sites.length - 1));
+
 		function loadPage(str) {
 			var page = $("#viewer-thingy");
 			page.fadeOut(300, function () {
-				page.load("pages/"+str);
+				page.load("pages/"+str+".html");
 				page.fadeIn(300);
 			});
 		}
+
+		function nextPage () {
+			index = (index + 1) % sites.length;
+			loadPage(sites[index]);
+		}
+
+		function prevPage () {
+			index = (index + (sites.length - 1)) % sites.length;
+			loadPage(sites[index]);
+		}
+
+		$(function () {
+			loadPage(sites[index]);
+		})
+
+		$(document).keydown(function(e) {
+		    switch(e.which) {
+		        case 37: // left
+		        prevPage();
+		        break;
+
+		        case 39: // right
+		        nextPage();
+		        break;
+
+		        default: return; // exit this handler for other keys
+		    }
+		    e.preventDefault(); // prevent the default action (scroll / move caret)
+		});
 		</script>
 
 		<h1 id='begin'>void main () {</h1>
@@ -26,11 +58,15 @@
 			<p>
 				Welcome, here are a couple of pages you might be interested in:
 			</p> <p>
-				<a onclick="loadPage('Ramblings.html');">Ramblings</a>: a page of poorly written stuffs.
+				<a id="Ramblings" onclick="loadPage('Ramblings');">Ramblings</a>: a page of poorly written stuffs.
 			</p> <p>
-				<a onclick="loadPage('Projects.html');">Projects</a>: a page of more poorly written stuffs, this time with code.
+				<a id="Projects" onclick="loadPage('Projects');">Projects</a>: a page of more poorly written stuffs, this time with code.
 			</p>
 		</article>
+		<div id="buttons">
+			<div onclick="prevPage();">prev</div>
+			<div onclick="nextPage();">next</div>
+		</div>
 
 		<!-- Stuffs goes here -->
 		<div id="viewer-thingy">
