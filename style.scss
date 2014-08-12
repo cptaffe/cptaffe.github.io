@@ -10,7 +10,7 @@ $fontstack: "Ubuntu", sans-serif;
 
 body{
 	max-width: 750px;
-	padding: 0 20px;
+	padding: 0 10%;
 	margin: auto;
 	padding-top: 20px;
 	font-family: $fontstack;
@@ -21,6 +21,7 @@ body{
 	font-size: 36px;
 	margin: 5px 0;
 	margin-bottom: 40px;
+
 }
 #end{
 	font-weight: 800;
