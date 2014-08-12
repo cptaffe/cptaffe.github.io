@@ -24,59 +24,17 @@ body {
 
 article {
   margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 20px; }
   article p {
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 15px; }
 
 a, a:visited {
+  cursor: pointer;
   color: #4183C4;
   text-decoration: none;
   transition: all .2s ease; }
 
 a:hover {
   color: #5aa0d2; }
-
-#issue {
-  margin-top: 20px;
-  background-color: #f0f0f0;
-  padding: 5px 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  max-height: 20px;
-  transition: ease 0.5s all;
-  width: 200px; }
-  #issue #report {
-    cursor: pointer;
-    margin: 5px 0;
-    margin-bottom: 15px; }
-  #issue textarea, #issue input {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 12px;
-    border-radius: 2.5px;
-    border: 0;
-    outline: none;
-    resize: none;
-    width: 200px;
-    margin: 5px 0;
-    padding: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: transparent;
-    transition: ease 0.5s all; }
-  #issue input {
-    margin-top: 10px; }
-  #issue button {
-    width: 100px;
-    outline: none;
-    color: white;
-    background-color: #4183C4;
-    border: 0;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer; }
-    #issue button :hover {
-      background-color: #5aa0d2; }
-
-#issue:hover {
-  max-height: 140px; }

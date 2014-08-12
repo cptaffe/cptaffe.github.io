@@ -6,33 +6,36 @@
 	<body>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-		<h1 id='begin'>int main() {</h1>
+		<!-- Lame JavaScript -->
 
-		<!--News Articles-->
+		<script>
+		function loadPage(str) {
+			var page = $("#viewer-thingy");
+			page.fadeOut(300, function () {
+				page.load("pages/"+str);
+				page.fadeIn(300);
+			});
+		}
+		</script>
+
+		<h1 id='begin'>void main () {</h1>
+
+		<!-- Links -->
 		<article>
-			<h3>Mesher</h3>
+			<h2>Hello!</h2>
 			<p>
-				STL editor written completely in JS: <a href='./Mesher'>Mesher</a>.
+				Welcome, here are a couple of pages you might be interested in:
+			</p> <p>
+				<a onclick="loadPage('Ramblings.html');">Ramblings</a>: a page of poorly written stuffs.
+			</p> <p>
+				<a onclick="loadPage('Projects.html');">Projects</a>: a page of more poorly written stuffs, this time with code.
 			</p>
 		</article>
-		<article>
-			<h3>Markdown Editor</h3>
-			<p>
-				Markdown preview page, made awesome with Bootstrap: <a href='./bootstrap'>bootstrap</a>.
-			</p>
-		</article>
-		<article>
-			<h3>CSS Zen Thingy</h3>
-			<p>
-				Example of my awesome CSS skills: <a href='./css-zen'>css zen</a> (<a href="https://github.com/cptaffe/css-zen/">github</a>).
-				Images are given proper citation on the github page to the best of my ability.
-			</p>
+
+		<!-- Stuffs goes here -->
+		<div id="viewer-thingy">
 			
-			<p>
-				As these images are used for educational purposes only, they are covered by <a href='http://www.copyright.gov/fls/fl102.html'>fair use</a> and thusly
-				do not require direct permission to use.
-			</p>
-		</article>
+		</div>
 
 		<h1 id='end'>}</h1>
 	</body>
