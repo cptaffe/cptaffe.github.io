@@ -12,7 +12,6 @@
 		// kunami
 		var kunami = 0;
 		function kunami_code(e) {
-			console.log("kunami"+e.which+kunami);
 			if (kunami < 2) {
 				if(e.which == 38){kunami++;} // up, up
 				else {kunami = 0;}
@@ -29,10 +28,11 @@
 				if(e.which == 66){kunami++;} // B
 				else {kunami = 0;}
 			} else if (kunami == 9) {
-				if(e.which == 65){kunami++;} // B
+				if(e.which == 65){kunami++;} // A
 				else {kunami = 0;}
 			} else if (kunami == 10) {
 				if (e.which == 13) {
+					console.log("konami(↑↑↓↓←→←→ba↩)");
 					loadPage("Konami");
 					kunami = 0;
 				}
@@ -46,8 +46,7 @@
 			var page = $("#viewer-thingy");
 			page.fadeOut(300, function () {
 				// timestamp to combat caching
-				page.load("pages/"+str+".html?time="+new Date().getTime());
-				page.fadeIn(300);
+				page.load("pages/"+str+".html?time="+new Date().getTime(), page.fadeIn(300));
 			});
 		}
 
@@ -65,8 +64,7 @@
 			loadPage(sites[index]);
 		})
 
-		// keypress stuff
-		$(document).keydown(function(e) {
+		var keypressFunc = function(e) {
 			if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
 				var key = e.keyCode;
 				if (e.keyCode >= 48 && e.keyCode <= 57) {
@@ -90,16 +88,14 @@
 			        if (kunami == 0){kunami_code(e);}
 			        break;
 
-			        // r refresh
-			        case 82:
-			        loadPage(sites[index]);
-			        break;
-
 			        default: return; // exit this handler for other keys
 			    }
 			}
 		    e.preventDefault(); // prevent the default action (scroll / move caret)
-		});
+		};
+
+		// keypress stuff
+		$(document).keydown(keypressFunc);
 		</script>
 
 		<h1 id='begin'>void main () {</h1>
