@@ -46,7 +46,7 @@
 			var page = $("#viewer-thingy");
 			page.fadeOut(300, function () {
 				// timestamp to combat caching
-				page.load("pages/"+str+".html?time="+new Date().getTime(), page.fadeIn(300));
+				page.load("pages/"+str+".html?time="+(new Date().getTime()).toString(), page.fadeIn(300));
 			});
 		}
 
