@@ -52,10 +52,11 @@ a:hover {
   -ms-user-select: none;
   user-select: none;
   margin-bottom: 10px; }
-
-#buttons > div {
-  padding: 2px;
-  margin: 5px;
-  color: #4183C4;
-  display: inline;
-  cursor: pointer; }
+  #buttons div {
+    padding: 2px;
+    margin: 5px;
+    color: #4183C4;
+    display: inline;
+    cursor: pointer; }
+  #buttons #num {
+    color: rgba(200, 200, 200, 0.5); }

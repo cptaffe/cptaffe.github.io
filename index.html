@@ -32,8 +32,9 @@
 				else {kunami = 0;}
 			} else if (kunami == 10) {
 				if (e.which == 13) {
-					console.log("konami(↑↑↓↓←→←→ba↩)");
+					$("#num").html("konami(↑↑↓↓←→←→ba↩)");
 					loadPage("Konami");
+					$("#num").html("konami(↑↑↓↓←→←→ba↩)");
 					kunami = 0;
 				}
 			}
@@ -44,6 +45,7 @@
 
 		function loadPage(str) {
 			var page = $("#viewer-thingy");
+			$("#num").html("");
 			page.fadeOut(300, function () {
 				// timestamp to combat caching
 				page.load("pages/"+str+".html?time="+new Date().getTime(), function () {
@@ -116,6 +118,7 @@
 		<div id="buttons">
 			<div onclick="prevPage();">prev</div>
 			<div onclick="nextPage();">next</div>
+			<div id="num"></div>
 		</div>
 
 		<!-- Stuffs goes here -->

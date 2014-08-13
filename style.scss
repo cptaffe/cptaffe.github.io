@@ -63,16 +63,18 @@ a:hover{
 	-ms-user-select: none;
 	user-select: none;
 	margin-bottom: 10px;
-}
-
-#buttons>div {
-	padding: 2px;
-	margin: 5px;
-	color: #4183C4;
-	//border-width: 0px;
-	//border-left-width: 5px;
-	//border-style: solid;
-	//border-color: rgb(100,100,100);
-	display: inline;
-	cursor: pointer;
+	div {
+		padding: 2px;
+		margin: 5px;
+		color: #4183C4;
+		//border-width: 0px;
+		//border-left-width: 5px;
+		//border-style: solid;
+		//border-color: rgb(100,100,100);
+		display: inline;
+		cursor: pointer;
+	}
+	#num {
+		color: rgba(200, 200, 200, 0.5);;
+	}
 }
