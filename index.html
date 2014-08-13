@@ -60,10 +60,6 @@
 			loadPage(sites[index]);
 		}
 
-		$(function () {
-			loadPage(sites[index]);
-		})
-
 		var keypressFunc = function(e) {
 			if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
 				var key = e.keyCode;
@@ -96,6 +92,10 @@
 
 		// keypress stuff
 		$(document).keydown(keypressFunc);
+
+		$(function () {
+			loadPage(sites[index]);
+		});
 		</script>
 
 		<h1 id='begin'>void main () {</h1>
