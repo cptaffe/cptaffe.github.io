@@ -9,32 +9,32 @@
 		<!-- Lame JavaScript -->
 
 		<script>
-		// kunami
-		var kunami = 0;
-		function kunami_code(e) {
-			if (kunami < 2) {
-				if(e.which == 38){kunami++;} // up, up
-				else {kunami = 0;}
-			} else if (kunami >= 2 && kunami < 4) {
-				if(e.which == 40){kunami++;} // down, down
-				else {kunami = 0;}
-			} else if (kunami == 4 || kunami == 6) {
-				if(e.which == 37){kunami++;} // left
-				else {kunami = 0;}
-			} else if (kunami == 5 || kunami == 7) {
-				if(e.which == 39){kunami++;} // right
-				else {kunami = 0;}
-			} else if (kunami == 8) {
-				if(e.which == 66){kunami++;} // B
-				else {kunami = 0;}
-			} else if (kunami == 9) {
-				if(e.which == 65){kunami++;} // A
-				else {kunami = 0;}
-			} else if (kunami == 10) {
+		// konami
+		var konami = 0;
+		function konami_code(e) {
+			if (konami < 2) {
+				if(e.which == 38){konami++;} // up, up
+				else {konami = 0;}
+			} else if (konami >= 2 && konami < 4) {
+				if(e.which == 40){konami++;} // down, down
+				else {konami = 0;}
+			} else if (konami == 4 || konami == 6) {
+				if(e.which == 37){konami++;} // left
+				else {konami = 0;}
+			} else if (konami == 5 || konami == 7) {
+				if(e.which == 39){konami++;} // right
+				else {konami = 0;}
+			} else if (konami == 8) {
+				if(e.which == 66){konami++;} // B
+				else {konami = 0;}
+			} else if (konami == 9) {
+				if(e.which == 65){konami++;} // A
+				else {konami = 0;}
+			} else if (konami == 10) {
 				if (e.which == 13) {
 					loadPage("Konami");
 					$("#num").html("konami(↑↑↓↓←→←→ba↩)");
-					kunami = 0;
+					konami = 0;
 				}
 			}
 		}
@@ -73,7 +73,7 @@
 				}
 				loadPage(sites[key]);
 			} else {
-				if (kunami > 0){kunami_code(e);}
+				if (konami > 0){konami_code(e);}
 				switch(e.which) {
 			        case 37: // left
 			        prevPage();
@@ -83,8 +83,8 @@
 			        nextPage();
 			        break;
 
-			        case 38: // first kunami code char
-			        if (kunami == 0){kunami_code(e);}
+			        case 38: // first konami code char
+			        if (konami == 0){konami_code(e);}
 			        break;
 
 			        default: return; // exit this handler for other keys
