@@ -121,8 +121,11 @@
 
 		// load default page & set hash or
 		$(function () {
-			var page = getHashValue();
-			if (page != "" && $.inArray(page, sites) > -1) {
+			var page;
+			if (location.hash != "" &&
+				(page = getHashValue()) &&
+				page != "" &&
+				$.inArray(page, sites) > -1) {
 				loadPage(page);
 			} else {
 				loadPage(sites[index]);
