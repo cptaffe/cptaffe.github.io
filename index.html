@@ -54,6 +54,9 @@
 		var sites = ["Ramblings", "Projects"];
 		var index = 1; //Math.round(Math.random() * (sites.length - 1));
 
+		// future dsq_reset function
+		var dsq_reset;
+
 		function loadPage(str) {
 			var page = $("#viewer-thingy");
 			$("#num").html("");
@@ -63,6 +66,9 @@
 					page.fadeIn(300);
 				});
 			});
+
+			// page url change
+			location.hash = "#!" + str;
 		}
 
 		function nextPage () {
@@ -87,34 +93,41 @@
 			} else {
 				if (konami > 0){konami_code(e);}
 				switch(e.which) {
-			        case 37: // left
-			        prevPage();
-			        break;
+					case 37: // left
+					prevPage();
+					break;
 
-			        case 39: // right
-			        nextPage();
-			        break;
+					case 39: // right
+					nextPage();
+					break;
 
-			        case 38: // first konami code char
-			        if (konami == 0){konami_code(e);}
-			        break;
+					case 38: // first konami code char
+					if (konami == 0){konami_code(e);}
+					break;
 
-			        default: return; // exit this handler for other keys
-			    }
+					default: return; // exit this handler for other keys
+				}
 			}
-		    e.preventDefault(); // prevent the default action (scroll / move caret)
+			e.preventDefault(); // prevent the default action (scroll / move caret)
 		};
 
 		// keypress stuff
 		$(document).keydown(keypressFunc);
 
+		// get value from hash
+		function getHashValue() {
+			return location.hash.match(new RegExp('!([^&]*)'))[1];
+		}
+
+		// load default page & set hash or
 		$(function () {
-			if (location.hash != "") {
-				loadPage(location.hash);
+			var page = getHashValue();
+			if (page != "" && $.inArray(page, sites) > -1) {
+				loadPage(page);
 			} else {
 				loadPage(sites[index]);
 			}
-		});
+		})
 		</script>
 		<noscript>Yo bro, we need js.</noscript>
 
@@ -131,15 +144,14 @@
 			<p>
 				Welcome, here are a couple of pages you might be interested in:
 			</p> <p>
-				<a id="Ramblings" onclick="loadPage('Ramblings');">Ramblings</a>: a page of poorly written stuffs.
+				<a onclick="loadPage('Ramblings');">Ramblings</a>: a page of poorly written stuffs.
 			</p> <p>
-				<a id="Projects" onclick="loadPage('Projects');">Projects</a>: a page of more poorly written stuffs, this time with code.
+				<a onclick="loadPage('Projects');">Projects</a>: a page of more poorly written stuffs, this time with code.
 			</p>
 		</article>
 		<div id="buttons">
 			<div onclick="prevPage();">prev</div>
 			<div onclick="nextPage();">next</div>
-			<div id="num"></div>
 		</div>
 
 		<!-- Stuffs goes here -->
@@ -148,19 +160,6 @@
 		</div>
 
 		<h1 id='end'>}</h1>
-		
-		<!-- Disqus comments -->
-		<div id="disqus_thread"></div>
-		    <script type="text/javascript">
-		    	// config
-		    	var disqus_shortname = 'byteflameorg';
-		
-		        // disqus code
-		        (function() {
-		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		        })();
-		    </script>
+
 	</body>
 </html>
