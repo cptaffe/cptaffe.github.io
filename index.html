@@ -1,168 +1,143 @@
 <html>
 	<head>
-		<link type="text/css" href="style.css" rel="stylesheet"/>
-		<meta name="google-site-verification" content="a3A-3926CLdwHsXz0T40Z108f9qHOinDYnUdMml_6D4" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Connor Taffe</title>
+
+		<link rel="icon" href="favicon.png">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+		<style type="text/css" media="screen">
+		    .editor {
+		        display: block;
+		        width: 80%;
+				border-radius: 5px;
+				margin: auto;
+				margin-top: 10px;
+				margin-bottom: 10px;
+		    }
+			.project-pane{
+				padding: 10px;
+				padding-right: 10px;
+				padding-left: 10px;
+				margin-bottom: 5px;
+				margin-top: 5px;
+			}
+		</style>
 	</head>
 	<body>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-		<!-- Google Analytics -->
+		<div class="container">
+				<h1 class="page-header">Hello, World!</h1>
+
+				<p>
+					Hello, I am a computer science student currently attending <a href="//ualr.edu/computerscience/">UALR</a>, this page is a listing of some of my favorite <a href="//github.com/cptaffe">projects</a>.
+				</p> <p>
+					To contact me, use my <a href="mailto:cpaynetaffe@gmail.com">email</a>, my Google+ at <a href="//google.com/+ConnorTaffe">+ConnorTaffe</a>, my <a href="//linkedin.com/pub/connor-taffe/9a/241/7b0/en">LinkedIn</a>, or just have a browse through my <a href="//cptaffe.github.com/resume/resume.pdf">resume</a>.
+				</p>
+
+				<div class="project-pane" id="lispy">
+					<h1>lispy</h1>
+					<p>
+						<a href="//github.com/cptaffe/lispy">Lispy</a> is a lisp-like language interpreter written in Python. The language is specifically known as Basilisk, and is of my own devising.
+					</p> <p>
+						The repository includes sample functions in <code>std/math</code>, including <code>math:!</code>. To import them, just do:
+					</p>
+					<div class="editor" id="lispyEditor"></div>
+					<p>
+						It does nice error reporting by saving the line and character location for each token and printing said info when an error is found. In this particular interpreter, I used a coroutine-based model without using coroutines by having each piece save state in its own structure and on subsequent calling pick up where it left off.
+					</p>
+
+				</div>
+
+				<div class="project-pane" id="css-zen">
+					<h1>CSS Zen</h1>
+					<p>
+						The idea behind the <a href="//www.csszengarden.com/">CSS Zen</a> challenge is to style a page with as much functionality as CSS can provide. My attempt at this challenge can be seen <a href="//byteflame.org/css-zen">here</a>, you can find the repo with my css code <a href="//github.com/cptaffe/css-zen">here</a>.
+					</p>
+
+				</div>
+
+				<div class="project-pane" id="mesher">
+					<h1 style="color: rgb(212, 0, 0);">Mesher</h1>
+					<p>
+						<a href="//github.com/cptaffe/Mesher/">Mesher</a> is a client-side web application for rendering, editing, and saving 3D printable stls. It uses the newest web technologies and libraries such as THREE.js, JQuery, and Bootstrap.
+					</p> <p>
+						It is a modular applicaton written in JS, with support for multiple models, views, and projects. Each object stores its state in some data structure, allowing many instances of each to exist simultaneosly. Although not currently used, the api can support tabbed editor panes for each model. Multiple models on the same canvas are well supported and the undo-redo stack has been written to accomidate these states.
+					</p>
+
+				</div>
+
+				<div class="project-pane" id="utf8">
+					<h1>utf8</h1>
+					<p>
+						<a href="//github.com/cptaffe/utf8">utf8</a> is a utf-8 parser written in C. It has a useful interface featuring <code>utf8_rune utf8_encode(const uint32_t cp)</code> and <code>int32_t utf8_decode(const utf8_rune rune)</code> functions for encoding and decoding runes. There is also a <code>utf8_parser</code> and related functions for parsing utf-8 characters from a string, as well as a validation function.
+					</p> <p>
+						I took some pains to write complete comments so the source should be quite well documented. It complies with RFC 3629 as much as possible, and checks for and handles errors properly. Compiling with <code>make test</code> invokes the test program, also written in C, which does a series of calls and stress tests, reporting if anything failed with plenty of debugging information. If a test failed, <code>make</code> will fail.
+					</p>
+
+				</div>
+
+				<div class="project-pane" id="lex">
+					<h1>lex</h1>
+					<p>
+						<a href="//github.com/cptaffe/lex">lex</a> is an implementation of a monadic state machine framework written in C. It has a lex structure with related methods and is thusly object-oriented. This code allows for the running of a state-machine which keeps track of state via function pointers. These function pointers are called until one or more tokens are avaliable on the queue, then one is returned. On subsequent calls, the queue is checked for tokens, and if it is empty, the state machine is run.
+					</p>
+
+				</div>
+
+
+
+				<footer>
+					<p>&copy; Connor Taffe 2015. All rights reserved.</p>
+				</footer>
+		</div> <!-- container -->
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<!-- cdnjs.com cdn for the ace editor -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
 
 		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-50530549-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
+		function initEditor(id) {
+			var editor = ace.edit(id);
+			editor.setReadOnly(true);
+			editor.setTheme("ace/theme/monokai");
+			editor.getSession().setMode("ace/mode/lisp");
+			editor.renderer.setScrollMargin(10, 10, 0, 0);
+			editor.session.setUseWrapMode(true);
 
-		<!-- Lame JavaScript -->
-
-		<script>
-		// konami
-		var konami = 0;
-		function konami_code(e) {
-			if (konami < 2) {
-				if(e.which == 38){konami++;} // up, up
-				else {konami = 0;}
-			} else if (konami >= 2 && konami < 4) {
-				if(e.which == 40){konami++;} // down, down
-				else {konami = 0;}
-			} else if (konami == 4 || konami == 6) {
-				if(e.which == 37){konami++;} // left
-				else {konami = 0;}
-			} else if (konami == 5 || konami == 7) {
-				if(e.which == 39){konami++;} // right
-				else {konami = 0;}
-			} else if (konami == 8) {
-				if(e.which == 66){konami++;} // B
-				else {konami = 0;}
-			} else if (konami == 9) {
-				if(e.which == 65){konami++;} // A
-				else {konami = 0;}
-			} else if (konami == 10) {
-				if (e.which == 13) {
-					loadPage("Konami");
-					$("#num").html("konami(↑↑↓↓←→←→ba↩)");
-					konami = 0;
-				}
-			}
-		}
-
-		var sites = ["Ramblings", "Projects"];
-		var index = 1; //Math.round(Math.random() * (sites.length - 1));
-
-		// future dsq_reset function
-		var dsq_reset;
-
-		function loadPage(str) {
-			var page = $("#viewer-thingy");
-			$("#num").html("");
-			page.fadeOut(300, function () {
-				// timestamp to combat caching
-				page.load("pages/"+str+".html?time="+new Date().getTime(), function () {
-					page.fadeIn(300);
-				});
+			// set editor height by lines
+			editor.setOptions({
+			     maxLines: editor.session.getLength()
 			});
 
-			// page url change
-			location.hash = "#!" + str;
+			// disable editor as much as possible
+			editor.setOptions({
+			    readOnly: true,
+			    highlightActiveLine: false,
+			    highlightGutterLine: false
+			})
+			editor.renderer.$cursorLayer.element.style.opacity=0
 		}
 
-		function nextPage () {
-			index = (index + 1) % sites.length;
-			loadPage(sites[index]);
-		}
-
-		function prevPage () {
-			index = (index + (sites.length - 1)) % sites.length;
-			loadPage(sites[index]);
-		}
-
-		var keypressFunc = function(e) {
-			if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
-				var key = e.keyCode;
-				if (e.keyCode >= 48 && e.keyCode <= 57) {
-					key -= 48;
-				} else if (e.keyCode >= 96 && e.keyCode <= 105) {
-					key -= 96;
-				}
-				loadPage(sites[key]);
-			} else {
-				if (konami > 0){konami_code(e);}
-				switch(e.which) {
-					case 37: // left
-					prevPage();
-					break;
-
-					case 39: // right
-					nextPage();
-					break;
-
-					case 38: // first konami code char
-					if (konami == 0){konami_code(e);}
-					break;
-
-					default: return; // exit this handler for other keys
-				}
-			}
-			e.preventDefault(); // prevent the default action (scroll / move caret)
-		};
-
-		// keypress stuff
-		$(document).keydown(keypressFunc);
-
-		// get value from hash
-		function getHashValue() {
-			return location.hash.match(new RegExp('!([^&]*)'))[1];
-		}
-
-		// load default page & set hash or
-		$(function () {
-			var page;
-			if (location.hash != "" &&
-				(page = getHashValue()) &&
-				page != "" &&
-				$.inArray(page, sites) > -1) {
-				loadPage(page);
-			} else {
-				loadPage(sites[index]);
-			}
-		})
-		</script>
-		<noscript>Yo bro, we need js.</noscript>
-
-		<!-- Console Message -->
-		<script>
-		console.log("try: konami(↑↑↓↓←→←→ba↩)");
+		$(document).ready(function () {
+			document.getElementById("lispyEditor").innerHTML =
+			"(import std:math)\n=> (nil math:! math:^ math:square math:cube)\n(math:! 4)\n=> 24";
+			initEditor("lispyEditor");
+		});
 		</script>
 
-		<h1 id='begin'>void main () {</h1>
-
-		<!-- Links -->
-		<h2>print("Hello!");</h2>
-		<article>
-			<p>
-				Welcome, here are a couple of pages you might be interested in:
-			</p> <p>
-				<a onclick="loadPage('Ramblings');">Ramblings</a>: a page of poorly written stuffs.
-			</p> <p>
-				<a onclick="loadPage('Projects');">Projects</a>: a page of more poorly written stuffs, this time with code.
-			</p>
-		</article>
-		<div id="buttons">
-			<div onclick="prevPage();">prev</div>
-			<div onclick="nextPage();">next</div>
-		</div>
-
-		<!-- Stuffs goes here -->
-		<div id="viewer-thingy">
-
-		</div>
-
-		<h1 id='end'>}</h1>
-
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</body>
-</html>
+<html>
