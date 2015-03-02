@@ -110,32 +110,44 @@
 
 		<script>
 
-		function initEditor(id) {
-			var editor = ace.edit(id);
-			editor.setReadOnly(true);
-			editor.setTheme("ace/theme/monokai");
-			editor.getSession().setMode("ace/mode/lisp");
-			editor.renderer.setScrollMargin(10, 10, 0, 0);
-			editor.session.setUseWrapMode(true);
+		var EditorManager = function () {
+			this.editors = new Array();
+			this.newEditor = function (id, fn) {
+				var editor = ace.edit(id);
+				editor.setReadOnly(true);
+				editor.setTheme("ace/theme/monokai");
+				editor.getSession().setMode("ace/mode/lisp");
+				editor.renderer.setScrollMargin(10, 10, 0, 0);
+				editor.session.setUseWrapMode(true);
 
-			// set editor height by lines
-			editor.setOptions({
-			     maxLines: editor.session.getLength()
-			});
+				fn(editor);
 
-			// disable editor as much as possible
-			editor.setOptions({
-			    readOnly: true,
-			    highlightActiveLine: false,
-			    highlightGutterLine: false
-			})
-			editor.renderer.$cursorLayer.element.style.opacity=0
-		}
+				// set editor height by lines
+				editor.setOptions({
+					maxLines: editor.session.getLength()
+				});
+
+				// disable editor as much as possible
+				editor.setOptions({
+					readOnly: true,
+					highlightActiveLine: false,
+					highlightGutterLine: false
+				});
+
+				// invisible cursor
+				editor.renderer.$cursorLayer.element.style.opacity = 0;
+
+				this.editors.push(editor);
+				return editors;
+			};
+		};
+
+		var editors = new EditorManager();
 
 		$(document).ready(function () {
-			document.getElementById("lispyEditor").innerHTML =
-			"(import std:math)\n=> (nil math:! math:^ math:square math:cube)\n(math:! 4)\n=> 24";
-			initEditor("lispyEditor");
+			editors.newEditor("lispyEditor", function (editor) {
+					editor.getSession().setValue("(import std:math)\n=> (nil math:! math:^ math:square math:cube)\n(math:! 4)\n=> 24");
+			});
 		});
 		</script>
 
