@@ -32,6 +32,50 @@
 			}
 		</style>
 	</head>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<!-- cdnjs.com cdn for the ace editor -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
+
+	<script>
+	// Editor Manager Class
+	var EditorManager = function () {
+		this.editors = new Array();
+		this.newEditor = function (id, fn) {
+			var editor = ace.edit(id);
+			editor.setReadOnly(true);
+			editor.setTheme("ace/theme/monokai");
+
+			fn(editor);
+
+			editor.renderer.setScrollMargin(10, 10, 0, 0);
+			editor.session.setUseWrapMode(true);
+
+			// set editor height by lines
+			editor.setOptions({
+				maxLines: editor.session.getLength()
+			});
+
+			// disable editor as much as possible
+			editor.setOptions({
+				readOnly: true,
+				highlightActiveLine: false,
+				highlightGutterLine: false
+			});
+
+			// invisible cursor
+			editor.renderer.$cursorLayer.element.style.opacity = 0;
+
+			this.editors.push(editor);
+			return editors;
+		};
+	};
+
+	var editors = new EditorManager();
+	</script>
+
 	<body>
 
 		<div class="container">
@@ -51,6 +95,14 @@
 						The repository includes sample functions in <code>std/math</code>, including <code>math:!</code>. To import them, just do:
 					</p>
 					<div class="editor" id="lispyEditor"></div>
+					<script>
+					$(document).ready(function () {
+						editors.newEditor("lispyEditor", function (editor) {
+								editor.getSession().setValue("(import std:math)\n=> (nil math:! math:^ math:square math:cube)\n(math:! 4)\n=> 24");
+								editor.getSession().setMode("ace/mode/lisp");
+						});
+					});
+					</script>
 					<p>
 						It does nice error reporting by saving the line and character location for each token and printing said info when an error is found. In this particular interpreter, I used a coroutine-based model without using coroutines by having each piece save state in its own structure and on subsequent calling pick up where it left off.
 					</p>
@@ -80,9 +132,42 @@
 					<p>
 						<a href="//github.com/cptaffe/utf8">utf8</a> is a utf-8 parser written in C. It has a useful interface featuring <code>utf8_rune utf8_encode(const int32_t cp)</code> and <code>int32_t utf8_decode(const utf8_rune rune)</code> functions for encoding and decoding runes. There is also a <code>utf8_parser</code> and related functions for parsing utf-8 characters from a string, as well as a validation function.
 					</p> <p>
+						Safety was not taken lightly in <b>utf8</b> and several error values exist for types. <code>int32_t</code>'s treated as code-points are a maximum of 21 bits in length, opening all negative numbers for error values, so <code>utf8_CP_INVALID</code> and <code>utf8_CP_ERROR</code> are used to indicate invalid runes (in conversion) and other program errors. With runes, there are the values <code>0xf5</code> to <code>0xff</code> are invalid, and are thusly used for rune errors with the constants <code>utf8_RUNE_INVALID</code>, <code>utf8_RUNE_ERROR</code>, and <code>utf8_RUNE_SHORT</code>. These are used to indicate the same errors as the associated codepoint errors, except that <code>SHORT</code> is used to indicate a rune cannot be lexed for lack of length (only returned from functions doing this).
+					</p> <p>
 						I took some pains to write complete comments so the source should be quite well documented. It complies with RFC 3629 as much as possible, and checks for and handles errors properly. Compiling with <code>make test</code> invokes the test program, also written in C, which does a series of calls and stress tests, reporting if anything failed with plenty of debugging information. If a test failed, <code>make</code> will fail.
 					</p>
+					<p>Here's some example code using <b>utf8</b>:</p>
+					<div class="editor" id=utf8Editor></div>
+					<script>
+					$(document).ready(function () {
+						editors.newEditor("utf8Editor", function (editor) {
+								editor.getSession().setValue("int32_t codepoint = 0x5555;\nutf8_rune rune = utf8_encode(codepoint);\nprintf(\"U+%X->%#x=%.4s\\n\", utf8_decode(rune), rune,  (char *) &rune);");
+								editor.getSession().setMode("ace/mode/c_cpp");
+						});
+					});
+					</script>
 
+					<h2>utf8plus</h2>
+					<p>
+						<a href="//github.com/cptaffe/utf8plus">utf8plus</a> is a C++ wrapper for the <b>utf8</b> repo. It provides a <b>utf8</b> namespace and a <b>rune</b> class.
+						</p> <p>
+							The rune class has two static instantiator methods, <code>encode</code> and <code>get</code>. Encode takes an <code>int32_t</code> codepoint and encodes it to a rune, returning the instantiated rune (created using rune's constructor, which takes an int32_t encoded utf8). Get takes a <code>void *</code> to a memory location and a <code>size_t</code> which conveys the size, a utf8 rune is lexed from the beginning of this memory, if the memory is too short, an exception of type <code>rune::exception</code> with a <code>code</code> attribute of type <code>rune::exception::errcode</code> and value <code>SHORT</code> All rune functions will use this exception and either raise <code>SHORT</code> or <code>INVALID</code>. If something was interpretted as an <code>utf8_CP_ERROR</code> or <code>utf8_RUNE_ERROR</code> in the <b>utf8</b> package, a <code>logic_error</code> will be thrown here.
+					</p>
+					<p>
+						Rune class methods include <code>decode</code>, which returns an <code>int32_t</code> whose value is a code-point; <code>isvalid</code> which returns a bool indicating whether the rune is a valid utf-8 rune; and <code>len</code>, which returns the length of the rune in bytes.
+					</p>
+					<p>Here's a simple translation of the first example:</p>
+					<div class="editor" id=utf8plusEditor></div>
+					<script>
+					$(document).ready(function () {
+						editors.newEditor("utf8plusEditor", function (editor) {
+								editor.getSession().setValue("int32_t codepoint = 0x5555;\nutf8::rune rune = utf8::rune::encode(codepoint);\nprintf(\"U+%X->%#x=%.4s\\n\", rune.decode(), rune.value,  (char *) &rune.value);");
+								editor.getSession().setMode("ace/mode/c_cpp");
+						});
+					});
+					</script>
+
+					<p>This summary does not do justice to either, so check oiut the code for <a href="//github.com/cptaffe/utf8">utf8</a> and <a href="//github.com/cptaffe/utf8plus">utf8plus</a>.</p>
 				</div>
 
 				<div class="project-pane" id="lex">
@@ -101,55 +186,6 @@
 					<p>&copy; Connor Taffe 2015. All rights reserved.</p>
 				</footer>
 		</div> <!-- container -->
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-		<!-- cdnjs.com cdn for the ace editor -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
-
-		<script>
-
-		var EditorManager = function () {
-			this.editors = new Array();
-			this.newEditor = function (id, fn) {
-				var editor = ace.edit(id);
-				editor.setReadOnly(true);
-				editor.setTheme("ace/theme/monokai");
-				editor.getSession().setMode("ace/mode/lisp");
-				editor.renderer.setScrollMargin(10, 10, 0, 0);
-				editor.session.setUseWrapMode(true);
-
-				fn(editor);
-
-				// set editor height by lines
-				editor.setOptions({
-					maxLines: editor.session.getLength()
-				});
-
-				// disable editor as much as possible
-				editor.setOptions({
-					readOnly: true,
-					highlightActiveLine: false,
-					highlightGutterLine: false
-				});
-
-				// invisible cursor
-				editor.renderer.$cursorLayer.element.style.opacity = 0;
-
-				this.editors.push(editor);
-				return editors;
-			};
-		};
-
-		var editors = new EditorManager();
-
-		$(document).ready(function () {
-			editors.newEditor("lispyEditor", function (editor) {
-					editor.getSession().setValue("(import std:math)\n=> (nil math:! math:^ math:square math:cube)\n(math:! 4)\n=> 24");
-			});
-		});
-		</script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
