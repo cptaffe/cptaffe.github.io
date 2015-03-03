@@ -104,6 +104,10 @@
 					});
 					</script>
 					<p>
+						The code for the factorial (<code>!</code>) function is this: <code>(: math:! (@ (n) (if n 1 (* n (self (- n 1))))))</code>. It recursively checks if n is 1, multiplying n by the result of recursing with n - 1.
+					</p><p>
+						The evalutation portion of the interpreter is written monadically, returning a tuple containing a function pointer and the arguments to that function for each function. This way, the evaluator recurses only once for every source recursion.
+					</p><p>
 						It does nice error reporting by saving the line and character location for each token and printing said info when an error is found. In this particular interpreter, I used a coroutine-based model without using coroutines by having each piece save state in its own structure and on subsequent calling pick up where it left off.
 					</p>
 
@@ -123,8 +127,44 @@
 						<a href="//github.com/cptaffe/Mesher/">Mesher</a> is a client-side web application for rendering, editing, and saving 3D printable stls. It uses the newest web technologies and libraries such as THREE.js, JQuery, and Bootstrap.
 					</p> <p>
 						It is a modular applicaton written in JS, with support for multiple models, views, and projects. Each object stores its state in some data structure, allowing many instances of each to exist simultaneosly. Although not currently used, the api can support tabbed editor panes for each model. Multiple models on the same canvas are well supported and the undo-redo stack has been written to accomidate these states.
+					</p> <p>
+						Why not check out the live demo, <a href="//byteflame.org/Mesher">here</a>.
 					</p>
+				</div>
 
+				<div class="project-pane" id="uft8">
+					<h1>bf</h1>
+					<p>
+						<a href="//github.com/cptaffe/bf">bf</a> is a just-in-time (jit) compiler for the "BrainFuck" langauge. It uses a similar approach in the lexer-parser, using a concurrent, threaded approach which uses a mutex'd queue to pass tokens from the lexer to the evaluator. For this particular compiler, I did not write a tree-based evaluator, but an jit component.
+					</p> <p>
+						The jit compiler produces 64-bit instructions which it writes to an executable page, executing each full statement, which modifies some allocated memory. The jit uses one-byte operation isntructions, and uses one-byte registers for these operations, but keeps the current memory pointer in <code>rsi</code> for quick access and modification. At the end of each execution, the state is saved, moving <code>rsi</code> into a memory location in the jit structure. At the beginning of the next statement execution, this state is restored, keeping a persistent state for every execution.
+					</p> <p>
+						The following is a statement in BrainFuck; it adds 4, moves left 2, and adds 4:
+					</p>
+					<div class="editor" id="bfEditor"></div>
+					<script>
+					$(document).ready(function () {
+						editors.newEditor("bfEditor", function (editor) {
+								editor.getSession().setValue("++++>>++++");
+						});
+					});
+					</script>
+					<p>
+						The program reports the exec page contains the following insructions: <code>exec: { 0x48, 0xbe, 0x0, 0x20, 0xf9, 0x8, 0x1, 0x0, 0x0, 0x0, 0x80, 0x6, 0x4, 0x48, 0x83, 0xc6, 0x2, 0x80, 0x6, 0x4, 0x48, 0x89, 0xf0, 0x48, 0xa3, 0xc8, 0x4d, 0x40, 0x68, 0xba, 0x7f, 0x0, 0x0, 0xc3 }</code>; and the following memory state after execution: <code>mem: { 4, 0, 4, 0, 0 }[2]</code>.
+					</p><p>
+						This means that index 0 and 2 were increment 4 times, and that the last indice (position of <code>rsi</code>) is 2.
+					</p> <p>
+						The following is some dissassembly output from the above executable instructions:
+					</p>
+					<div class="editor" id="bfDumpEditor"></div>
+					<script>
+					$(document).ready(function () {
+						editors.newEditor("bfDumpEditor", function (editor) {
+							editor.getSession().setValue(".data:0x00000000	48be0020f90801000000	movabs rsi,0x108f92000\n.data:0x0000000a	800604	add    BYTE PTR [rsi],0x4\n.data:0x0000000d	4883c602	add    rsi,0x2 ; char* dst = arg[0]\n.data:0x00000011	800604	add    BYTE PTR [rsi],0x4\n.data:0x00000014	4889f0	mov    rax,rsi ; dst[i] = c\n.data:0x00000017	48a3c84d4068ba7f0000	movabs ds:0x7fba68404dc8,rax\n.data:0x00000021	c3	ret");
+							editor.getSession().setMode("ace/mode/assembly_x86");
+						});
+					});
+					</script>
 				</div>
 
 				<div class="project-pane" id="utf8">
@@ -167,7 +207,7 @@
 					});
 					</script>
 
-					<p>This summary does not do justice to either, so check oiut the code for <a href="//github.com/cptaffe/utf8">utf8</a> and <a href="//github.com/cptaffe/utf8plus">utf8plus</a>.</p>
+					<p>This summary does not do justice to either, so check out the code for <a href="//github.com/cptaffe/utf8">utf8</a> and <a href="//github.com/cptaffe/utf8plus">utf8plus</a>.</p>
 				</div>
 
 				<div class="project-pane" id="lex">
